@@ -5,7 +5,7 @@ export const mtbCategories = [
     image: "assets/cross-country.jpg"
   },
   {
-    name: "Downhill (DH)",
+    name: "Downhill",
     description: "The name is a giveaway here; in downhill mountain bike racing, you start the track at the top of the mountain and race until you reach the bottom. Whoever completes the race course in the quickest time wins.",
     image: "assets/downhill.jpg"
   },
@@ -27,7 +27,7 @@ export const mtbCategories = [
   {
     name: "Enduro",
     description: "In many ways, it is the most similar to how leisure mountain bikers ride generally outside of competition. It's all about a long day (or days) out riding in a beautiful mountain location, riding up climbs and racing down technical descents.",
-    image: ""
+    image: "assets/enduro.jpg"
   },
   {
     name: "Dirt Jumping",
