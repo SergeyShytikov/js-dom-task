@@ -13,20 +13,18 @@ const createListOfLi = () => {
 }
 createListOfLi()
 
+const description = document.createElement("p");
+  description.classList.add("text");
+  main.append(description);
+
 function displayImageAndText() {
   const  arg = [...arguments].join();
   const category = mtbCategories.find(item => item.name === arg);
   const img = document.getElementById("image");
   img.src=category.image;
-  const description = document.createElement("p");
-  description.classList.add("text");
   description.innerText = category.description;
-  main.append(description);
   return console.log(description)
-  TODO:  many descriptions displayed
 }
+
 const buttons = document.querySelectorAll(".button");
 buttons.forEach(item =>{item.addEventListener("click", ()=> {displayImageAndText(item.innerText)})})
-
-
-console.log(buttons)
