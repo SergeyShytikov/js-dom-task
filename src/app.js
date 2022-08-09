@@ -1,6 +1,5 @@
 import {mtbCategories} from '/src/data.js';
 
-const menu = document.querySelector(".menu");
 const main = document.querySelector(".main")
 const menuItems = document.querySelector(".menu-items");
 const createListOfLi = () => {
@@ -23,7 +22,7 @@ function displayImageAndText() {
   const img = document.getElementById("image");
   img.src=category.image;
   description.innerText = category.description;
-  return console.log(description)
+  return ;
 }
 
 const buttons = document.querySelectorAll(".button");
