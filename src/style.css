@@ -72,15 +72,20 @@ select {
 .wrapper{
   display: flex;
   justify-content: space-between;
+
   }
 
 /*side menu*/
 .side{
   display: flex;
 }
+
 .menu{
   display: flex;
-  background-color: bisque;
+  background-color: black;
+  width: 200px;
+  height: 100%;
+  padding-top: 10px;
 }
 .menu-items{
   display: flex;
@@ -90,15 +95,22 @@ select {
 }
 .button{
 border-style: dotted;
+color:azure;
+}
+.button:hover{
+  cursor: pointer;
+  color: blue;
 }
 
 /*main content*/
 .main{
 display: flex;
 flex-direction: column;
+max-width: 70%;
 }
+#image{
 
-.button:hover{
-  cursor: pointer;
-  color: blue;
+}
+.text{
+  margin-top: 2em;
 }
