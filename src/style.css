@@ -1,116 +1,73 @@
-/* Box sizing rules */
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
+  margin:0;
+  padding:0;
 }
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul, li {
   list-style: none;
 }
 
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
+a, a:visited {
+  text-decoration: none;
+  cursor: pointer;
 }
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-/*TODO: reduce rules about reset styles*/
-
-/*header*/
-.header{
-  background-color: greenyellow;
-  display: flex;
-}
+/*header----------------------*/
 .title{
-  background-color: aqua;
+  background-color: rgb(170, 247, 247);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  display: flex;
+  text-align: center;
 }
 
 .wrapper{
   display: flex;
-  justify-content: space-between;
-
+  flex-direction: column;
+  justify-content: center;
   }
 
-/*side menu*/
-.side{
+.nav-menu{
   display: flex;
-}
-
-.menu{
-  display: flex;
-  background-color: black;
-  width: 200px;
-  height: 100%;
-  padding-top: 10px;
+  background-color: rgb(147, 86, 86);
+  padding: 15px;
 }
 .menu-items{
+  list-style-type: none;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
   flex-grow: 1;
+  font-size: 20px;
+  padding-left: 0px;
 }
 .button{
-border-style: dotted;
-color:azure;
+  color:azure;
 }
 .button:hover{
   cursor: pointer;
   color: blue;
 }
 
-/*main content*/
+/*main content----------------------------*/
 .main{
-display: flex;
-flex-direction: column;
-max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 800px;
+  min-height: 600px;
 }
 #image{
-
+  max-width: 100%;
+  max-height: 50%;
+  object-fit: contain;
 }
 .text{
+  max-width: 50%;
   margin-top: 2em;
+  font-size: 20px;
+  line-height: 18px;
+  text-align: center;
+}
+@media (max-width: 768px){
+.menu-items {
+  flex-direction: column;
+}
 }

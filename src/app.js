@@ -5,6 +5,7 @@ const menuItems = document.querySelector(".menu-items");
 const createListOfLi = () => {
   mtbCategories.forEach(item => {
     const li = document.createElement("li");
+    //TODO: add "a" atribute to each li point
     li.classList.add("button");
     li.innerText = item.name;
     menuItems.append(li);
