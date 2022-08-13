@@ -2,12 +2,15 @@ import {mtbCategories} from '/src/data.js';
 
 const main = document.querySelector(".main")
 const menuItems = document.querySelector(".menu-items");
+
 const createListOfLi = () => {
   mtbCategories.forEach(item => {
     const li = document.createElement("li");
-    //TODO: add "a" atribute to each li point
-    li.classList.add("button");
-    li.innerText = item.name;
+    const button = document.createElement("button")
+    li.classList.add("menu-item");
+    button.classList.add("button");
+    button.innerText = item.name;
+    li.appendChild(button)
     menuItems.append(li);
   })
 }

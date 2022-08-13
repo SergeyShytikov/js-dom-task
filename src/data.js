@@ -20,7 +20,7 @@ export const mtbCategories = [
     image: "assets/slopestyle.jpg"
   },
   {
-    name: "Four-cross and dual slalom",
+    name: "4X & dual slalom",
     description: "Four-cross, usually abbreviated to 4X, is a mountain bike race discipline that takes place on a track similar to a BMX track. Four riders race simultaneously and head-to-head, with the winner the first rider to cross the finish line. In dual-slalom, two riders compete on identical parallel tracks, similar in style to 4X tracks. ",
     image: "assets/4x.jpg"
   },
