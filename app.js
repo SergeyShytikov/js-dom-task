@@ -1,4 +1,4 @@
-export const mtbCategories = [
+const mtbCategories = [
   {
     name: "Cross-Country",
     description: "Cross-country is perhaps the most famous discipline in mountain biking as it's the one you'll see at the Olympic Games, though there are actually several sub-categories of cross-country racing.",
@@ -35,3 +35,36 @@ export const mtbCategories = [
     image: "assets/dirt.jpg"
   },
 ]
+
+
+const main = document.querySelector(".main")
+const menuItems = document.querySelector(".menu-items");
+
+const createListOfLi = () => {
+  mtbCategories.forEach(item => {
+    const li = document.createElement("li");
+    const button = document.createElement("button")
+    li.classList.add("menu-item");
+    button.classList.add("button");
+    button.innerText = item.name;
+    li.appendChild(button)
+    menuItems.append(li);
+  })
+}
+createListOfLi()
+
+const description = document.createElement("p");
+  description.classList.add("text");
+  main.append(description);
+
+function displayImageAndText() {
+  const  arg = [...arguments].join();
+  const category = mtbCategories.find(item => item.name === arg);
+  const img = document.getElementById("image");
+  img.src=category.image;
+  description.innerText = category.description;
+  return ;
+}
+
+const buttons = document.querySelectorAll(".button");
+buttons.forEach(item =>{item.addEventListener("click", ()=> {displayImageAndText(item.innerText)})})
