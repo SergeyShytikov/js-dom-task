@@ -61,7 +61,7 @@ function displayImageAndText() {
   const  arg = [...arguments].join();
   const category = mtbCategories.find(item => item.name === arg);
   const img = document.getElementById("image");
-  img.src=category.image;
+  img.src = category.image;
   description.innerText = category.description;
   return ;
 }
